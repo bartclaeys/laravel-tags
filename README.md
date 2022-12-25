@@ -103,6 +103,11 @@ $tag2->order_column; //returns 2
 $tag->swapOrder($anotherTag);
 ```
 
+```
+//Print comma separated list of tags as past of URL in your page.blade.php file:
+<a href="/tags/{{ implode(',', $yourmodel->tags->pluck('name')->toArray()) }}">Tags</a>
+```
+
 Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
 
 ## Support us
